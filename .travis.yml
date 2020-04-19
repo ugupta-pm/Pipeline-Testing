@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.6"
+script: 
+    # Running pytest on the util functions 
+    - python3 -m pytest tests/ 
+
+# Installing the required libraries 
+install: 
+    - pip3 install --extra-index-url $EXTRA_INDEX_URL --trusted-host $TRUSTED_HOST -r requirements.txt
+
+deploy:
+  provider: pypi
+  user: admin
+  password: test1234
+  server: http://34.222.130.14:8081
