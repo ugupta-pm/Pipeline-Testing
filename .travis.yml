@@ -11,9 +11,9 @@ install:
 
 deploy:
   - provider: pypi
-    user: $USER
-    password: $PASS
-    server: $SERVER
+    user: admin
+    password: test1234
+    server: http://34.222.130.14:8081
     on:
       branch: master
   - provider: elasticbeanstalk
@@ -28,6 +28,4 @@ deploy:
     bucket_path: fullpipeline
     on:
       branch: develop
-      
 
-      
