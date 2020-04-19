@@ -13,7 +13,7 @@ deploy:
   - provider: pypi
     user: admin
     password: test1234
-    server: $SERVER
+    server: http://34.222.130.14:8081
     on:
       branch: master
   - provider: elasticbeanstalk
@@ -29,4 +29,3 @@ deploy:
     on:
       branch: develop
 
-      
