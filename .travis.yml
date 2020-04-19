@@ -10,7 +10,22 @@ install:
     - pip3 install --extra-index-url $EXTRA_INDEX_URL --trusted-host $TRUSTED_HOST -r requirements.txt
 
 deploy:
-  provider: pypi
-  user: admin
-  password: test1234
-  server: http://34.222.130.14:8081
+  - provider: pypi
+    user: $USER
+    password: $PASS
+    server: $SERVER
+    on:
+      branch: master
+  - provider: elasticbeanstalk
+    access_key_id: $ACCESS_KEY_ID
+    secret_access_key: $SECRET_ACCESS_KEY
+    region: us-west-2
+    app: End_to_End_Pipeline
+    env: End-to-End-Pipeline-test
+    on:
+      repo: ugupta-pm/CD-pipeline
+    bucket_name: fullpipeline
+    bucket_path: fullpipeline
+    on:
+      branch: develop
+      
