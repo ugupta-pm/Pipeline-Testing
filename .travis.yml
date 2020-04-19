@@ -11,8 +11,8 @@ install:
 
 deploy:
   - provider: pypi
-    user: $USER
-    password: $PASS
+    user: admin
+    password: test1234
     server: $SERVER
     on:
       branch: master
@@ -28,5 +28,5 @@ deploy:
     bucket_path: fullpipeline
     on:
       branch: develop
-      
+
       
