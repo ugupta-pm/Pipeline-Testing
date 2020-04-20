@@ -28,4 +28,5 @@ deploy:
     bucket_path: fullpipeline
     on:
       branch: develop
+      
 
