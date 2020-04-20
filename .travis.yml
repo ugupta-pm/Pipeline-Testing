@@ -11,9 +11,9 @@ install:
 
 deploy:
   - provider: pypi
-    user: admin
-    password: test1234
-    server: http://34.222.130.14:8081
+    user: $USER
+    password: $PASS
+    server: $SERVER
     on:
       branch: master
  
