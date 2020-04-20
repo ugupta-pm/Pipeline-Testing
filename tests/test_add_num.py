@@ -8,3 +8,5 @@ def test_add_num():
     assert add(2,2) == 4
     assert add(3,3) == 6
     assert add(6,6) == 12
+
+    
