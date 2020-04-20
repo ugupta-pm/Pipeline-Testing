@@ -9,6 +9,12 @@ script:
 install: 
     - pip3 install --extra-index-url $EXTRA_INDEX_URL --trusted-host $TRUSTED_HOST -r requirements.txt
 
+after_success:
+- git config --global user.name $USERNAME
+- git config --global user.email $EMAIL
+- pip install python-semantic-release
+- semantic-release publish
+
 deploy:
   - provider: pypi
     user: $USER
