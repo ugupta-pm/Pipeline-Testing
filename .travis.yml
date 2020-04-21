@@ -9,6 +9,11 @@ script:
 install: 
     - pip3 install --extra-index-url $EXTRA_INDEX_URL --trusted-host $TRUSTED_HOST -r requirements.txt
 
+after_success:
+- git config --global user.name $USERNAME
+- git config --global user.email $EMAIL
+- semantic-release publish
+
 deploy:
   - provider: pypi
     user: $USER
@@ -25,7 +30,6 @@ deploy:
     on:
       repo: ugupta-pm/CD-pipeline
     bucket_name: fullpipeline
-    bucket_path: fullpipeline
     on:
       branch: develop
       
