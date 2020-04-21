@@ -27,9 +27,8 @@ deploy:
     region: us-west-2
     app: End_to_End_Pipeline
     env: End-to-End-Pipeline-test
-    on:
-      repo: ugupta-pm/CD-pipeline
-    bucket_name: fullpipeline/
+    bucket_name: fullpipeline
+    bucket_path: fullpipeline
     on:
       branch: develop
       
