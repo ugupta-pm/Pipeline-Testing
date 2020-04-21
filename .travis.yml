@@ -29,7 +29,7 @@ deploy:
     env: End-to-End-Pipeline-test
     on:
       repo: ugupta-pm/CD-pipeline
-    bucket_name: fullpipeline
+    bucket_name: fullpipeline/
     on:
       branch: develop
       
